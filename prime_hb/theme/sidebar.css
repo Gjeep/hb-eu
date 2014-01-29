@@ -1,0 +1,15 @@
+/* ---------------------------------------------
+------        Sidebar CSS BEGIN
+--------------------------------------------- */
+
+#page-right {
+float:left;
+width:76%;
+display: block;
+}
+
+#page-sidebar {
+float:right;
+width:23%;
+display: block;
+}
