@@ -13,14 +13,16 @@
 div.mChatBG1 {
 	background-color: none;
 	padding: 5px 5px 5px 5px;
-	border-bottom: 1px dotted #DDDDDD;
+	border-top: 1px solid #333333;
+	border-bottom: 1px solid #000000;
 	overflow: hidden;
 }
 
 div.mChatBG2 {
-	background-color: #ffffff;
+	background-color: none;
 	padding: 5px 5px 5px 5px;
-	border-bottom: 1px dotted #DDDDDD;
+	border-top: 1px solid #333333;
+	border-bottom: 1px solid #000000;
 	overflow: hidden;
 }
 
@@ -45,23 +47,23 @@ input.mChatText {
 	cursor: text;
 	width: 50%;
 	background-color: none;
-	border: 1px solid #B4BAC0;
-	color: #333333;
+	border: 1px solid #c5772b;
+	color: #ccc;
 	padding: 5px 5px 3px 5px;
 	margin: 3px 0px 3px 5px;
 }
 
 input.mChatText:hover {
-	border-color: #11A3EA;
+	border-color: #ffb14c;
 }
 
 div.mChatHover:hover {
-	background-color: #ffffff;
+	background-color: #0e0e0e;
 }
 
 div.mChatBodyFix {
 	width: 100% !important;
-	background-color: #E9F0F5 !important;
+	background-color: none !important;
 }
 
 div.mChatStatic {
@@ -100,6 +102,7 @@ input.mChatColor {
 div.mChatMessage {
 	padding: 3px;
 	font-size: 1.1em;
+	color: #ccc;
 	width: 98%;
 
 }

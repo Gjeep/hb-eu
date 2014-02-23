@@ -7,13 +7,31 @@
 					</dl>
 				</li>
 			</ul>
-			</div>
+	</div>
 	<!-- IF SCRIPT_NAME eq 'index' --><div class="trigger active"></div><!-- ENDIF -->
 		<div class="collapsethis">
-		<ul class="topiclist forums" style="padding: 0.05cm">
-			<div style="text-align: center;">
-				<iframe width="250" height="156" src="http://www.youtube.com/embed/Cur0IMzslek" frameborder="0" allowfullscreen></iframe>
-			</div>
-		</ul>
-</div>
+			<ul class="topiclist forums" style="padding: 0.05cm">
+				<div class="video-container">
+					<iframe width="250" height="156" src="http://www.youtube.com/embed/Cur0IMzslek" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</ul>
+		</div>
 <!-- This is the end of the first video box -->
+	<script type="text/javascript">
+	// <![CDATA[
+            $(".forumlist").collapse({show: function(){
+                    this.animate({
+                        opacity: 'toggle',
+                        height: 'toggle'
+                    }, 300);
+                },
+                hide : function() {
+                       
+                    this.animate({
+                        opacity: 'toggle',
+                        height: 'toggle'
+                    }, 300);
+                }
+            });
+	// ]]>
+    </script>

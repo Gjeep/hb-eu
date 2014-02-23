@@ -57,17 +57,16 @@
 }
 
 .stat-round {
-    background: #f5f5f5 url("{T_THEME_PATH}/images/statround.png") repeat-x;
+    background: url("{T_THEME_PATH}/images/statround.png") repeat-x;
     background-position: top;
 	text-align: center;
-    color: #777777;
+    color: #5e5e5e;
     width: auto;
-    border: 1px solid #cbcbcb;
     padding: 4px 10px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    text-shadow: 1px 1px 0px #fafafa;
+    text-shadow: 1px 1px 0px #0f0f0f;
     font-size: 11px;
 	height: auto;
 }
@@ -262,7 +261,8 @@
 	text-align: left;
 	width: 400px;
 	display: inline-block;
-	padding-top: 50px;
+	padding-top: 80px;
+	padding-bottom: 110px;
 }
 
 .topnav {

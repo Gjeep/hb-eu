@@ -19,17 +19,28 @@ h2 {
 }
 
 h3 {
-	border-bottom-color: #e7e7e7;
 	color: #393939;
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
+	background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
+	background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
+	background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
+	margin: 15px;
 }
 
 hr {
-	border-color: #FFFFFF;
-	border-top-color: #e7e7e7;
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
+	background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
+	background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
+	background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
+	margin: 15px;
 }
 
 hr.dashed {
-	border-top-color: #e7e7e7;
+	border-top-color: #000000;
 }
 
 /* Search box
@@ -60,12 +71,12 @@ hr.dashed {
 }
 
 .forabg {
-	background-color: #191919;
+	background-color: none;
 	background-image: url("{T_THEME_PATH}/images/bg_list.gif");
 }
 
 .forumbg {
-	background-color: #191919;
+	background-color: none;
 	background-image: url("{T_THEME_PATH}/images/bg_header.gif");
 }
 
@@ -82,12 +93,12 @@ hr.dashed {
 	color: #000000;
 }
 
-.bg1	{ background-color: #f0f0f0; }
+.bg1	{ background-color: none; }
 .primebg1	{ background-color: none; }
-.vt-bg1	{ background-color: #f5f5f5; }
-.bg2	{ background-color: #f3f3f3;  }
+.vt-bg1	{ background-color: none; }
+.bg2	{ background-color: none;  }
 .primebg2	{ background-color: none; }
-.bg3	{ background-color: #efefef; }
+.bg3	{ background-color: none; }
 
 .ucprowbg {
 	background-color: #989898;
@@ -171,26 +182,26 @@ dl.details dd {
 ---------------------------------------- */
 
 .pagination span strong {
-	color: #FFFFFF;
-	background-color: #595959;
+	color: #c5772b;
+	background-color: #000000;
 	border-color: #595959;
 }
 
 .pagination span a, .pagination span a:link, .pagination span a:visited {
 	color: #4f4f4f;
-	background-color: #a1a1a1;
+	background-color: #000000;
 	border-color: #7e7e7e;
 }
 
 .pagination span a:hover {
 	border-color: #5a5a5a;
-	background-color: #5a5a5a;
-	color: #FFF;
+	background-color: #000000;
+	color: #ffb14c;
 }
 
 .pagination span a:active {
 	color: #4f4f4f;
-	background-color: #a1a1a1;
+	background-color: #000000;
 	border-color: #7e7e7e;
 }
 
@@ -200,11 +211,12 @@ dl.details dd {
 }
 
 .row .pagination span a, li.pagination span a {
-	background-color: #FFFFFF;
+	background-color: #000000;
 }
 
 .row .pagination span a:hover, li.pagination span a:hover {
-	background-color: #5a5a5a;
+	background-color: #000000;
+	color: #ffb14c;
 }
 
 /* Miscellaneous styles
@@ -268,13 +280,13 @@ a:active	{ color: #000000; }
 
 /* Links for forum/topic lists */
 a.forumtitle {
-	color: #ffff;
+	color: #c5772b;
 }
 
 /* a.forumtitle:visited { color: #ffff; } */
 
 a.forumtitle:hover {
-	color: #000000;
+	color: #ffb14c;
 }
 
 a.forumtitle:active {
@@ -282,13 +294,13 @@ a.forumtitle:active {
 }
 
 a.topictitle {
-	color: #ffff;
+	color: #c5772b;
 }
 
 /* a.topictitle:visited { color: #5a5a5a; } */
 
 a.topictitle:hover {
-	color: #000000;
+	color: #ffb14c;
 }
 
 a.topictitle:active {
@@ -375,7 +387,7 @@ Colours and backgrounds for content.css
 -------------------------------------------------------------- */
 
 ul.forums {
-	background-color: #ffffff;
+	background-color: none;
 }
 
 ul.topiclist li {
@@ -383,12 +395,12 @@ ul.topiclist li {
 }
 
 ul.topiclist dd {
-	border-left: none;
+	border-left-color: 333333;
 }
 
 .rtl ul.topiclist dd {
-	border-right-color: #fff;
-	border-left-color: transparent;
+	border-right-color: #000000;
+	border-left-color: #333333;
 }
 
 ul.topiclist li.row dt a.subforum.read {
@@ -401,8 +413,8 @@ ul.topiclist li.row dt a.subforum.unread {
 
 li.row {
 	background-color: none;
-	border-top: none;
-	border-bottom-color: none;	
+	border-top-color: #333333;
+	border-bottom-color: #000000;	
 }
 
 li.row strong {
@@ -410,7 +422,7 @@ li.row strong {
 }
 
 li.row:hover {
-	background-color: #e2e2e2;
+	background-color: #0e0e0e;
 	-webkit-transition: all 350ms ease-in-out;
 	-moz-transition: all 350ms ease-in-out;
 	-ms-transition: all 350ms ease-in-out;
@@ -419,12 +431,13 @@ li.row:hover {
 }
 
 li.row:hover dd {
-	border-left: none;
+	border-right-color: #000000;
+	border-left-color: #333333;
 }
 
 .rtl li.row:hover dd {
-	border-right-color: #e7e7e7;
-	border-left-color: transparent;
+	border-right-color: #000000;
+	border-left-color: #333333;
 }
 
 li.header dt, li.header dd {
@@ -445,12 +458,12 @@ ul.topiclist dd.searchextra {
 /* Content container styles
 ----------------------------------------*/
 .content {
-	color: #333333;
+	color: #ccc;
 }
 
 .content h2, .panel h2 {
 	color: #393939;
-	border-bottom-color:  #e7e7e7;
+	border-bottom-color:  #000000;
 }
 
 dl.faq dt {
@@ -464,9 +477,9 @@ dl.faq dt {
 
 /* Post signature */
 .signature {
-	border-top-color: #e7e7e7;
-	color: rgb(159, 159, 159);
-	text-shadow: 0px 1px 0px rgb(255, 255, 255);	
+	border-top-color: #333333;
+	color: #ffffff;
+	text-shadow: rgba(0,0,0,0.5) 0px -1px 0px;
 }
 
 /* Post noticies */
@@ -642,21 +655,22 @@ fieldset.polls dd div {
 ----------------------------------------*/
 .postprofile {
 color: #666666;
-border-left-color: #FFFFFF;
+border-left-color: #333333;
 }
 
 .rtl .postprofile {
-	border-right-color: #FFFFFF;
-	border-left-color: transparent;
+	border-right-color: #000000;
+	border-left-color: #333333;
 }
 
 .pm .postprofile {
-	border-left-color: #DDDDDD;
+	border-right-color: #000000;
+	border-left-color: #333333;
 }
 
 .rtl .pm .postprofile {
-	border-right-color: #DDDDDD;
-	border-left-color: transparent;
+	border-right-color: #000000;
+	border-left-color: #333333;
 }
 
 .postprofile strong {
@@ -899,8 +913,8 @@ dl.mini dt {
 
 /* PM marking colours */
 .pmlist li.pm_message_reported_colour, .pm_message_reported_colour {
-	border-left-color: #BC2A4D;
-	border-right-color: #BC2A4D;
+	border-left-color: #333333;
+	border-right-color: #000000;
 }
 
 .pmlist li.pm_marked_colour, .pm_marked_colour {
