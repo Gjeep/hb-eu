@@ -108,22 +108,6 @@ hr.dashed {
 	background-color: #9e9e9e;
 }
 
-span.corners-top {
-	background-image: url("{T_THEME_PATH}/images/corners_left.png");
-}
-
-span.corners-top span {
-	background-image: url("{T_THEME_PATH}/images/corners_right.png");
-}
-
-span.corners-bottom {
-	background-image: url("{T_THEME_PATH}/images/corners_left.png");
-}
-
-span.corners-bottom span {
-	background-image: url("{T_THEME_PATH}/images/corners_right.png");
-}
-
 /* Horizontal lists
 ----------------------------------------*/
 
