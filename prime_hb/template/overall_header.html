@@ -79,8 +79,8 @@
 </script>
 <script type="text/javascript" src="{T_SUPER_TEMPLATE_PATH}/styleswitcher.js"></script>
 <script type="text/javascript" src="{T_SUPER_TEMPLATE_PATH}/forum_fn.js"></script>
-<script type="text/javascript" src="{T_TEMPLATE_PATH}/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="{T_TEMPLATE_PATH}/jquery.cookie.js"></script>
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="{T_TEMPLATE_PATH}/jquery.collapse.js"></script>
 
 <link href="{T_THEME_PATH}/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
@@ -93,10 +93,23 @@
 <!-- IF S_CONTENT_DIRECTION eq 'rtl' -->
 	<link href="{T_THEME_PATH}/bidi.css" rel="stylesheet" type="text/css" media="screen, projection" />
 <!-- ENDIF -->
-
+<link rel="stylesheet" href="{T_THEME_PATH}/blank.css" type="text/css" class="colour-switcher" />
+<script type="text/javascript">
+	if($.cookie("colour-choice")) {
+		$("link.colour-switcher").attr("href",$.cookie("colour-choice"));
+	}
+	$(document).ready(function() {
+		$("a.switch").click(function() {
+			$("link.colour-switcher").attr("href",$(this).attr('rel'));
+			$.cookie("colour-choice",$(this).attr('rel'), {expires: 365, path: '/'});
+			return false;
+		});
+	});
+</script>
 </head>
 
 <body id="phpbb" class="section-{SCRIPT_NAME} {S_CONTENT_DIRECTION}">
+
 <div class="topnav">
 <div id="wrap2" style="width: {$PRIME_BOARD_WIDTH};">
 <div class="navlink"><ul>
@@ -132,24 +145,24 @@
 				<li><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x">
 					<strong><img src="{T_THEME_PATH}/images/icon_logout.png" width="16" height="16" alt="" />{L_LOGOUT}</strong>
 				</a></li>
-				<!-- ENDIF -->			
+				<!-- ENDIF -->
 </ul></div>
 
 <div class="navlink" style="float: right;">
-		<!-- IF S_USER_LOGGED_IN -->				
-        <div class="float-right">
-            <div class="quicksearch" style="margin-top: -1px;">
-                <!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
-                    <form action="{U_SEARCH}" method="get" id="search">
-                        <fieldset>
-                            <input name="keywords" id="keywords" type="text" maxlength="128" value="<!-- IF SEARCH_WORDS-->{SEARCH_WORDS}<!-- ELSE -->{L_SEARCH_MINI}<!-- ENDIF -->" onclick="if(this.value=='{LA_SEARCH_MINI}')this.value='';" onblur="if(this.value=='')this.value='{LA_SEARCH_MINI}';" />
-                            <!--<input class="button2" value="{L_SEARCH}" type="submit" />-->
-                            {S_SEARCH_HIDDEN_FIELDS}
-                        </fieldset>
-                        </form>
-                    <!-- ENDIF -->
-            </div>
-        </div>
+		<!-- IF S_USER_LOGGED_IN -->
+		<div class="float-right">
+			<div class="quicksearch" style="margin-top: -1px;">
+				<!-- IF S_DISPLAY_SEARCH and not S_IN_SEARCH -->
+					<form action="{U_SEARCH}" method="get" id="search">
+						<fieldset>
+							<input name="keywords" id="keywords" type="text" maxlength="128" value="<!-- IF SEARCH_WORDS-->{SEARCH_WORDS}<!-- ELSE -->{L_SEARCH_MINI}<!-- ENDIF -->" onclick="if(this.value=='{LA_SEARCH_MINI}')this.value='';" onblur="if(this.value=='')this.value='{LA_SEARCH_MINI}';" />
+							<!--<input class="button2" value="{L_SEARCH}" type="submit" />-->
+							{S_SEARCH_HIDDEN_FIELDS}
+						</fieldset>
+						</form>
+					<!-- ENDIF -->
+			</div>
+		</div>
 		<!-- ENDIF -->
 		<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
 	<form method="post" action="{S_LOGIN_ACTION}"  style="margin-top: -6px;">
@@ -219,6 +232,21 @@
 	</div>
 
 	<a name="start_here"></a>
+
+<br /><br />
+
+<div class="navbar">
+	<div class="inner"><span class="corners-top"><span></span></span>
+		<ul class="linklist rightside">
+	<li><strong>Colour:</strong></li>
+			<li><a href="#" rel="{T_THEME_PATH}/colours/red.css" class="switch">Red</a> &bull; </li>
+			<li><a href="#" rel="{T_THEME_PATH}/colours/green.css" class="switch">Green</a> &bull; </li>
+			<li><a href="#" rel="{T_THEME_PATH}/colours/yellow.css" class="switch">Yellow</a> &bull; </li>
+			<li><a href="#" rel="{T_STYLESHEET_LINK}" class="switch">Default</a></li>
+		</ul>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+
 	<div id="page-body">
 		<!-- IF S_BOARD_DISABLED and S_USER_LOGGED_IN and (U_MCP or U_ACP) -->
 		<div id="information" class="rules">
