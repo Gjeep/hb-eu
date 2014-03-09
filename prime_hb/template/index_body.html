@@ -1,5 +1,10 @@
 <!-- INCLUDE overall_header.html -->
-
+<script type="text/javascript">
+function openChatPopup ()
+{
+window.open ('mchat_popup.php', 'Discussion Aquariophilie Du Quebec', config='height=750, width=750, toolbar=no, menubar=no, scrollbars=yes, resizable=yes, location=no, directories=no, status=no')
+}
+</script>
 <p class="{S_CONTENT_FLOW_END}<!-- IF S_USER_LOGGED_IN --> rightside<!-- ENDIF -->"><!-- IF S_USER_LOGGED_IN -->{LAST_VISIT_DATE}<!-- ELSE -->{CURRENT_TIME}<!-- ENDIF --></p>
 <!-- IF U_MCP --><p>{CURRENT_TIME} <br />[&nbsp;<a href="{U_MCP}">{L_MCP}</a>&nbsp;]</p><!-- ELSEIF S_USER_LOGGED_IN --><p>{CURRENT_TIME}</p><!-- ENDIF -->
 
@@ -14,7 +19,6 @@
 <!-- INCLUDE sidebar.html -->
 <div id="page-right">
 <!-- INCLUDE forumlist_body.html -->
-
 <!-- IF NEWEST_USER -->
 	<div class="stat-round">
 	{TOTAL_POSTS} &bull; {TOTAL_TOPICS} &bull; {TOTAL_USERS} &bull; {NEWEST_USER}
