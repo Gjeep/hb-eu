@@ -159,7 +159,7 @@ p.right {
 #logo {
 	float: left;
 	width: auto;
-	padding: 100px 200px 200px 100px;
+	padding: 10px 13px 0 10px;
 }
 
 a#logo:hover {
@@ -411,7 +411,7 @@ table.table1 td {
 
 table.table1 tbody td {
 	padding: 5px;
-	border-top: 1px solid #222222;
+	border-top: 1px solid #FAFAFA;
 }
 
 table.table1 tbody th {

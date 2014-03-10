@@ -126,7 +126,7 @@ table.table1 tbody tr {
 }
 
 table.table1 tbody tr:hover, table.table1 tbody tr.hover {
-	background-color: #ffffff;
+	background-color: #000000;
 	color: #000;
 }
 
@@ -135,7 +135,7 @@ table.table1 td {
 }
 
 table.table1 tbody td {
-	border-top-color: #FAFAFA;
+	border-top-color: #222222;
 }
 
 table.table1 tbody th {

@@ -1,5 +1,7 @@
 <!-- IF MCHAT_ARCHIVE_MODE or MCHAT_CUSTOM_PAGE -->
-	<!-- INCLUDE overall_header.html -->
+	<!-- INCLUDE simple_header.html -->
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{T_TEMPLATE_PATH}/jquery.cookie.js"></script>
 <!-- ENDIF -->
 <!-- IF MCHAT_ARCHIVE_MODE -->
 <!--**
@@ -19,7 +21,7 @@
 			<ul class="topiclist">
 				<li class="header">
 					<dl class="icon">
-						<dt><!-- IF MCHAT_ARCHIVE_MODE -->{L_MCHAT_ARCHIVE_PAGE}<!-- ELSE --><a href="#" title="Mini-Chat" onclick="openChatPopup();">Shoutbawx</a><!-- ENDIF --></dt>
+						<dt><!-- IF MCHAT_ARCHIVE_MODE -->{L_MCHAT_ARCHIVE_PAGE}<!-- ELSE -->{L_MCHAT_TITLE}</a><!-- ENDIF --></dt>
 					</dl>
 				</li>
 			</ul>
@@ -190,5 +192,5 @@
 <!-- IF LEGEND --><br /><em>{L_LEGEND}: {LEGEND}</em><!-- ENDIF --></div>
 <!-- ENDIF -->
 <!-- IF MCHAT_ARCHIVE_MODE or MCHAT_CUSTOM_PAGE -->
-<!-- INCLUDE overall_footer.html -->
+<!-- INCLUDE simple_footer.html -->
 <!-- ENDIF -->
