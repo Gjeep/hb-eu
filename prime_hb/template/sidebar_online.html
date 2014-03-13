@@ -2,7 +2,7 @@
 			<ul class="topiclist">
 				<li class="header">
 					<dl class="icon">
-						<dt>Online</dt>
+						<dt>Friends</dt>
 					</dl>
 				</li>
 			</ul>
@@ -11,7 +11,26 @@
 		<div class="collapsethis">
 			<ul class="topiclist forums">
 				<div style="text-align: center;">
-					<iframe height="156" src="http://www.hb-eu.com/community/viewonlineblock.php" frameborder="0" ></iframe>
+					
+	<!-- IF S_USER_LOGGED_IN -->
+		<!-- IF not S_IS_BOT -->
+	<strong>Online</strong><br />
+		<!-- BEGIN b3p_friends_online -->
+			<span style="float:left; padding-left:5px; padding-top:2px;">{b3p_friends_online.USERNAME_FULL}</span><br style="clear:both" />
+		<!-- BEGINELSE -->
+			<span style="float:left; padding-left:5px; padding-top:2px;">No Friends online</span>
+			<br style="clear:both" />
+		<!-- END b3p_friends_online -->
+		<br style="clear:both" />
+		<h3></h3>
+		<strong>Offline</strong><br />
+		<!-- BEGIN b3p_friends_offline -->
+			<span style="float:left; padding-left:5px; padding-top:2px;">{b3p_friends_offline.USERNAME_FULL}</span><br style="clear:both" />
+		<!-- BEGINELSE -->
+			<span style="float:left; padding-left:5px; padding-top:2px;">No Friends offline</span>
+		<!-- END b3p_friends_offline -->
+		<!-- ENDIF -->
+		<!-- ENDIF -->
 				</div>
 			</ul>
-	</div>            
+	</div>
