@@ -175,13 +175,13 @@
 	
 	<div class="mainheader">
 		<div class="nav-bar"><ul>
-				<li><a href="{U_INDEX}" accesskey="h">
+				<li><a href="{U_PORTAL}" accesskey="p">
 					<strong>{L_HOME}</strong>
-					<span>{SITENAME}</span>
+					<span>{SITENAME} frontpage</span>
 				</a></li>
-				<li><a href="{U_FAQ}" title="{L_FAQ_EXPLAIN}">
-					<strong>{L_FAQ}</strong>
-					<span>{L_FAQ_EXPLAIN}</span>
+				<li><a href="{U_INDEX}" title="Forum">
+					<strong>Forum</strong>
+					<span>Community home</span>
 				</a></li>
 				<!-- IF not S_IS_BOT and S_DISPLAY_MEMBERLIST -->
 				<li><a href="{U_MEMBERLIST}" title="{L_MEMBERLIST_EXPLAIN}">
@@ -189,16 +189,18 @@
 					<span>{L_MEMBERLIST_EXPLAIN}</span>
 				</a></li>
 				<!-- ENDIF -->
-				<!-- IF S_DISPLAY_SEARCH -->
-				<li><a href="{U_SEARCH}" title="{L_SEARCH_ADV_EXPLAIN}">
-					<strong>{L_SEARCH}</strong>
-					<span>{L_SEARCH_ADV_EXPLAIN}</span>
-				</a></li>
-				<!-- ENDIF -->
 				<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
 				<li><a href="{U_PROFILE}" title="{L_PROFILE}" accesskey="e">
 					<strong>{L_READ_PROFILE}</strong>
 					<span>{L_PROFILE}</span>
+				</a></li>
+				<li><a href="{U_CALENDAR}" title="Calendar">
+					<strong>Calendar</strong>
+					<span>View planned events</span>
+				</a></li>
+				<li><a href="{U_GAMES}" title="Game database">
+					<strong>Game DB</strong>
+					<span>View who is playing what games</span>
 				</a></li>
 				<!-- ENDIF -->
 		</ul></div>
