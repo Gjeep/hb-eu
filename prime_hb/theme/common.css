@@ -125,19 +125,6 @@ p.right {
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-#gjeep-wrap {
-	padding: 5px 5px;
-	margin: 0 auto;                /* This center aligns your wrap width on the browser page */
-	/*background: url("{T_THEME_PATH}/images/tweed.png");*/
-    background-color: none;     /*  Gjeep edit #ffffff - Gives the wrap a white background */
-	border-radius: 4px;    /* The Rounded corners for all modern browsers */
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;	
-	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-}
-
 #simple-wrap {
 	padding: 6px 10px;
 	background-color: none;
@@ -244,7 +231,7 @@ a#logo:hover {
 .panel {
 	margin-bottom: 4px;
 	padding: 0 10px;
-	background-color: #f3f3f3;
+	background-color: none;
 	color: #3f3f3f;
 }
 

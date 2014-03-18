@@ -81,7 +81,7 @@ hr.dashed {
 }
 
 .panel {
-	background-color: #f3f3f3;
+	background-color: none;
 	color: #232323;
 }
 
@@ -267,7 +267,7 @@ a.forumtitle {
 	color: #c5772b;
 }
 
-/* a.forumtitle:visited { color: #ffff; } */
+/* a.forumtitle:visited { color: #ffffff; } */
 
 a.forumtitle:hover {
 	color: #ffb14c;
@@ -436,13 +436,13 @@ ul.topiclist dd.searchextra {
 /* Post body styles
 ----------------------------------------*/
 .postbody {
-	color: #333333;
+	color: #666666;
 }
 
 /* Content container styles
 ----------------------------------------*/
 .content {
-	color: #ccc;
+	color: #AAAAAA;
 }
 
 .content h2, .panel h2 {
@@ -461,8 +461,8 @@ dl.faq dt {
 
 /* Post signature */
 .signature {
-	border-top-color: #333333;
-	color: #ffffff;
+	border-top-color: #2C2C2C;
+	color: #888888;
 	text-shadow: rgba(0,0,0,0.5) 0px -1px 0px;
 }
 
@@ -475,9 +475,17 @@ dl.faq dt {
 ----------------------------------------*/
 /* Quote block */
 blockquote {
-	background-color: #EBEADD;
+	background-color: #0e0e0e;
+	-webkit-transition: all 350ms ease-in-out;
+	-moz-transition: all 350ms ease-in-out;
+	-ms-transition: all 350ms ease-in-out;
+	-o-transition: all 350ms ease-in-out;
+	transition: all 350ms ease-in-out;	
 	background-image: url("{T_THEME_PATH}/images/quote.gif");
-	border-color:#DBDBCE;
+	border-color:#222222;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:10px;
 }
 
 .rtl blockquote {
@@ -486,26 +494,26 @@ blockquote {
 
 blockquote blockquote {
 	/* Nested quotes */
-	background-color:#EFEED9;
+	background-color:#1B1B1B;
 }
 
 blockquote blockquote blockquote {
 	/* Nested quotes */
-	background-color: #EBEADD;
+	background-color: #242424;
 }
 
 /* Code block */
 dl.codebox {
-	background-color: #FFFFFF;
-	border-color: #8e8e8e;
+	background-color: #000000;
+	border-color: #484848;
 }
 
 dl.codebox dt {
-	border-bottom-color:  #e7e7e7;
+	border-bottom-color:  #585858;
 }
 
 dl.codebox code {
-	color: #2E8B57;
+	color: #AE5700;
 }
 
 .syntaxbg		{ color: #FFFFFF; }
@@ -658,7 +666,7 @@ border-left-color: #333333;
 }
 
 .postprofile strong {
-	color: #000000;
+	color: #868686;
 }
 
 .online {
@@ -935,12 +943,13 @@ Colours and backgrounds for forms.css
 /* General form styles
 ----------------------------------------*/
 select {
-	background: #fafafa;
-	border: 1px solid #ccc;
+	background: #232323;
+	border: 1px solid #080808;
 	-webkit-border-radius:3px;
 	-moz-border-radius:3px;
 	border-radius:4px;
 	padding: 4px;
+	color: #666666
 }
 
 label {
@@ -992,7 +1001,7 @@ fieldset.quick-login input.inputbox {
 	background: none repeat scroll 0% 0% rgb(252, 252, 252);
 	color: rgb(159, 159, 159);
 	text-shadow: 0px 1px 0px rgb(255, 255, 255);
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) inset;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 1) inset;
 	border-radius: 3px 3px 3px 3px;
 }
 
@@ -1009,10 +1018,10 @@ fieldset.quick-login input.inputbox {
 ---------------------------------------- */
 
 a.button1, input.button1, input.button3, a.button2, input.button2 {
-    background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) repeat-x scroll 0px -1px rgb(244, 244, 244);
-    border: 1px solid rgb(132, 132, 132);
-    color: rgb(65, 65, 65);
-    text-shadow: 0px 1px 0px rgb(255, 255, 255);
+    background: linear-gradient(to bottom, rgb(77, 76, 76) 0%, rgba(0, 0, 0, 0) 100%) repeat-x scroll 0px -1px rgb(54, 52, 52);
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(165, 165, 165);
+    text-shadow: 0px 1px 0px rgb(0, 0, 0);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
     border-radius: 3px 3px 3px 3px;
     display: inline-block;
@@ -1031,10 +1040,10 @@ input.button3 {
 
 /* Alternative button */
 a.button2, input.button2, input.button3 {
-    background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) repeat-x scroll 0px -1px rgb(244, 244, 244);
-    border: 1px solid rgb(132, 132, 132);
-    color: rgb(65, 65, 65);
-    text-shadow: 0px 1px 0px rgb(255, 255, 255);
+    background: linear-gradient(to bottom, rgb(77, 76, 76) 0%, rgba(0, 0, 0, 0) 100%) repeat-x scroll 0px -1px rgb(54, 52, 52);
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(165, 165, 165);
+    text-shadow: 0px 1px 0px rgb(0, 0, 0);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
     border-radius: 3px 3px 3px 3px;
     display: inline-block;
@@ -1050,8 +1059,8 @@ a.button1, a.button1:link, a.button1:visited, a.button1:active, a.button2, a.but
 
 /* Hover states */
 a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover {
-	border-color: rgb(132, 132, 132);
-	color: #7a7a7a;
+	border-color: rgb(255, 177, 76);
+	color: #FFFFFF;
 }
 
 input.search {

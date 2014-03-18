@@ -27,7 +27,8 @@ div.mChatBG2 {
 }
 
 div.mChatRowLimit {
-	overflow: auto;
+	overflow-x: auto;
+	overflow-y: hidden;
 	width: 100%;
 }
 
@@ -45,9 +46,9 @@ div.mChatPanel {
 
 input.mChatText {
 	cursor: text;
-	width: 50%;
-	background-color: none;
-	border: 1px solid #c5772b;
+	width: 70%;
+	background-color: #131313;
+	border: 1px solid #333333;
 	color: #ccc;
 	padding: 5px 5px 3px 5px;
 	margin: 3px 0px 3px 5px;
@@ -102,7 +103,7 @@ input.mChatColor {
 div.mChatMessage {
 	padding: 3px;
 	font-size: 1.1em;
-	color: #ccc;
+	color: #888888;
 	width: 98%;
 
 }
