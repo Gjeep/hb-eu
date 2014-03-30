@@ -116,7 +116,7 @@ p.right {
 #prime-wrap {
 	padding: 5px 5px;
 	margin: 0 auto;                /* This center aligns your wrap width on the browser page */
-	background-color: none;     /*  Gjeep edit #ffffff - Gives the wrap a white background */
+	background-color: rgba(121, 121, 121, 0.01);     /*  Gjeep edit #ffffff - Gives the wrap a white background */
 	border-radius: 4px;    /* The Rounded corners for all modern browsers */
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;	
@@ -215,14 +215,14 @@ a#logo:hover {
 }
 
 .forabg {
-	background: #b1b1b1 none repeat-x 0 0;
+	background: none;
 	margin-bottom: 4px;
 	padding: 0 5px;
 	clear: both;
 }
 
 .forumbg {
-	background: #ebebeb none repeat-x 0 0;
+	background: none;
 	margin-bottom: 4px;
 	padding: 0 5px;
 	clear: both;
@@ -250,9 +250,9 @@ a#logo:hover {
 	color: #000000;
 }
 
-.bg1	{ background-color: #f7f7f7;}
-.bg2	{ background-color: #f2f2f2; }
-.bg3	{ background-color: #ebebeb; }
+.bg1	{ background-color: rgba(121, 121, 121, 0.01) ; }
+.bg2	{ background-color: rgba(121, 121, 121, 0.05) ; }
+.bg3	{ background-color: rgba(121, 121, 121, 0.1) ; }
 
 .rowbg {
 	margin: 5px 5px 2px 5px;

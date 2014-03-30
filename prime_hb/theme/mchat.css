@@ -59,7 +59,7 @@ input.mChatText:hover {
 }
 
 div.mChatHover:hover {
-	background-color: #0e0e0e;
+	background-color: rgba(14, 14, 14, 0.5);
 }
 
 div.mChatBodyFix {
