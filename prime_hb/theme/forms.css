@@ -39,10 +39,14 @@ option.disabled-option {
 
 textarea {
 	font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+	color: #777777;
 	width: 60%;
 	padding: 2px;
 	font-size: 1em;
 	line-height: 1.4em;
+	background-color: #333333;
+	background-color: rgba(3, 3, 3, 0.29);
+	border-color: #111111;
 }
 
 label {

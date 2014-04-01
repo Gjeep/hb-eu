@@ -4,10 +4,10 @@ Colours and backgrounds for common.css
 -------------------------------------------------------------- */
 
 html, body {
-	color: #696969;
-	background: url("{T_THEME_PATH}/images/headers/rotate.php"),url("{T_THEME_PATH}/images/bg-loop.jpg");
-	background-repeat:no-repeat,repeat-y;
-	background-position:center top,center; 
+	color: #5C5C5C;
+	background: url("{T_THEME_PATH}/images/gradient.png"),url("{T_THEME_PATH}/images/headers/rotate.php"),url("{T_THEME_PATH}/images/bg-loop.jpg");
+	background-repeat:no-repeat,no-repeat,repeat-y;
+	background-position:center top 301px,center top,center; 
 }
 
 h1 {
@@ -15,29 +15,18 @@ h1 {
 }
 
 h2 {
-	color: #fff;
+	color: #666666;
 }
 
 h3 {
-	color: #898989;
-	border: 0;
-	height: 1px;
-	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
-	background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
-	background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
-	background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
-	margin: 15px;
-	padding-bottom: 15px;
+	border-bottom-color: #333333;
+	border-bottom-color: rgba(51, 51, 51, 0.45);
+	color: #6C6C6C;
 }
 
 hr {
-	border: 0;
-	height: 1px;
-	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
-	background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
-	background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
-	background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
-	margin: 15px;
+	border-color: #444444;
+	border-top-color: #222222;
 }
 
 hr.dashed {
@@ -229,8 +218,13 @@ li.reported:hover {
 }
 
 div.rules {
-	background-color: #ECD5D8;
-	color: #BC2A4D;
+	background-color: #ffb14c;
+	background-color: rgba(255, 177, 76, 0.1);
+	color: #c5772b;
+	border-color:#000000;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:3px;
 }
 
 p.rules {
@@ -467,7 +461,10 @@ dl.faq dt {
 
 /* Post signature */
 .signature {
-	border-top-color: #2C2C2C;
+	border-top-style: inset;
+	border-top-color: #222222;
+	background: none repeat scroll 0% 0% rgb(44, 44, 44);
+	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.1);
 	color: #888888;
 	text-shadow: rgba(0,0,0,0.5) 0px -1px 0px;
 }
@@ -482,6 +479,7 @@ dl.faq dt {
 /* Quote block */
 blockquote {
 	background-color: #0e0e0e;
+	background-color: rgba(0, 0, 0, 0.37);
 	-webkit-transition: all 350ms ease-in-out;
 	-moz-transition: all 350ms ease-in-out;
 	-ms-transition: all 350ms ease-in-out;
@@ -500,12 +498,14 @@ blockquote {
 
 blockquote blockquote {
 	/* Nested quotes */
-	background-color:#1B1B1B;
+	background-color: #0e0e0e;
+	background-color: rgba(0, 0, 0, 0.27);
 }
 
 blockquote blockquote blockquote {
 	/* Nested quotes */
-	background-color: #242424;
+	background-color: #0e0e0e;
+	background-color: rgba(0, 0, 0, 0.17);
 }
 
 /* Code block */
@@ -970,7 +970,7 @@ option.disabled-option {
 /* Definition list layout for forms
 ---------------------------------------- */
 dd label {
-	color: #333;
+	color: #727272;
 }
 
 /* Hover effects */
@@ -997,7 +997,7 @@ fieldset.quick-login input.inputbox {
 ----------------------------------------*/
 
 #message-box textarea {
-	color: #333333;
+	color: #999999;
 }
 
 /* Input field styles
@@ -1006,6 +1006,7 @@ fieldset.quick-login input.inputbox {
 	padding: 2px;
 	border: 1px solid rgb(48, 48, 48);
 	background: none repeat scroll 0% 0% rgb(44, 44, 44);
+	background: none repeat scroll 0% 0% rgba(44, 44, 44, 0.5);
 	color: rgb(150, 150, 150);
 	text-shadow: 0px 1px 0px rgb(0, 0, 0);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 1) inset;
@@ -1018,7 +1019,11 @@ fieldset.quick-login input.inputbox {
 
 .inputbox:focus {
 	border-color: #AE5700;
-	color: #333333;
+	color: #999999;
+}
+
+*:focus {
+	outline: none;
 }
 
 /* Form button styles
@@ -1038,7 +1043,7 @@ a.button1, input.button1, input.button3, a.button2, input.button2 {
 }
 
 a.button1, input.button1 {
-	border-color: rgb(132, 132, 132);
+	border-color: rgb(0, 0, 0);
 }
 
 input.button3 {
