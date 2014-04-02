@@ -11,6 +11,7 @@ display: block;
 #page-sidebar {
 float:right;
 width:25%;
+min-width: 247px;
 display: block;
 }
 /* See more at: http://avexdesigns.com/responsive-youtube-embed/#sthash.0pdnJrzr.dpuf  */

@@ -4,10 +4,10 @@ Colours and backgrounds for common.css
 -------------------------------------------------------------- */
 
 html, body {
-	color: #696969;
-	background: url("{T_THEME_PATH}/images/headers/rotate.php"),url("{T_THEME_PATH}/images/bg-loop.jpg");
-	background-repeat:no-repeat,repeat-y;
-	background-position:center top,center; 
+	color: #5C5C5C;
+	background: url("{T_THEME_PATH}/images/gradient.png"),url("{T_THEME_PATH}/images/headers/rotate.php"),url("{T_THEME_PATH}/images/bg-loop.jpg");
+	background-repeat:no-repeat,no-repeat,repeat-y;
+	background-position:center top 301px,center top,center; 
 }
 
 h1 {
@@ -15,28 +15,18 @@ h1 {
 }
 
 h2 {
-	color: #fff;
+	color: #666666;
 }
 
 h3 {
-	color: #393939;
-	border: 0;
-	height: 1px;
-	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
-	background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
-	background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
-	background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
-	margin: 15px;
+	border-bottom-color: #333333;
+	border-bottom-color: rgba(51, 51, 51, 0.45);
+	color: #6C6C6C;
 }
 
 hr {
-	border: 0;
-	height: 1px;
-	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
-	background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
-	background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
-	background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.15), rgba(0,0,0,0)); 
-	margin: 15px;
+	border-color: #444444;
+	border-top-color: #222222;
 }
 
 hr.dashed {
@@ -72,25 +62,25 @@ hr.dashed {
 
 .forabg {
 	background-color: none;
-	background-image: url("{T_THEME_PATH}/images/bg_list.gif");
+	background-image: none;
 }
 
 .forumbg {
 	background-color: none;
-	background-image: url("{T_THEME_PATH}/images/bg_header.gif");
+	background-image: none;
 }
 
 .panel {
-	background-color: #f3f3f3;
-	color: #232323;
+	background-color: none;
+	color: #555555;
 }
 
 .post:target .content {
-	color: #000000;
+	color: #AAAAAA;
 }
 
 .post:target h3 a {
-	color: #000000;
+	color: #AAAAAA;
 }
 
 .bg1	{ background-color: none; }
@@ -127,6 +117,7 @@ table.table1 tbody tr {
 
 table.table1 tbody tr:hover, table.table1 tbody tr.hover {
 	background-color: #000000;
+	background-color: rgba(14, 14, 14, 0.6);
 	color: #000;
 }
 
@@ -136,6 +127,7 @@ table.table1 td {
 
 table.table1 tbody td {
 	border-top-color: #222222;
+	background-color: rgba(14, 14, 14, 0.15);
 }
 
 table.table1 tbody th {
@@ -151,7 +143,7 @@ table.info tbody th {
 /* Misc layout styles
 ---------------------------------------- */
 dl.details dt {
-	color: #000000;
+	color: #666666;
 }
 
 dl.details dd {
@@ -226,8 +218,13 @@ li.reported:hover {
 }
 
 div.rules {
-	background-color: #ECD5D8;
-	color: #BC2A4D;
+	background-color: #ffb14c;
+	background-color: rgba(255, 177, 76, 0.1);
+	color: #c5772b;
+	border-color:#000000;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:3px;
 }
 
 p.rules {
@@ -242,7 +239,7 @@ Colours and backgrounds for links.css
 
 a:link	{ color: #ffff; }
 a:visited	{ color: #ffff; }
-a:hover	{ color: #ffffff; }
+a:hover	{ color: #ffb14c; }
 a:active	{ color: #000000; }
 
 /* Links on gradient backgrounds */
@@ -267,7 +264,7 @@ a.forumtitle {
 	color: #c5772b;
 }
 
-/* a.forumtitle:visited { color: #ffff; } */
+/* a.forumtitle:visited { color: #ffffff; } */
 
 a.forumtitle:hover {
 	color: #ffb14c;
@@ -398,20 +395,23 @@ ul.topiclist li.row dt a.subforum.unread {
 li.row {
 	background-color: none;
 	border-top-color: #333333;
-	border-bottom-color: #000000;	
+	border-bottom-color: #000000;
 }
 
 li.row strong {
-	color: #000000;
+	color: #4D4D4D;
 }
 
 li.row:hover {
-	background-color: #0e0e0e;
+	background-color: #1E1E1E;
+	background-color: rgba(14, 14, 14, 0.5);
 	-webkit-transition: all 350ms ease-in-out;
 	-moz-transition: all 350ms ease-in-out;
 	-ms-transition: all 350ms ease-in-out;
 	-o-transition: all 350ms ease-in-out;
 	transition: all 350ms ease-in-out;	
+	border-top-color: rgba(14, 14, 14, 0.5);
+	border-bottom-color: #000000;
 }
 
 li.row:hover dd {
@@ -436,13 +436,13 @@ ul.topiclist dd.searchextra {
 /* Post body styles
 ----------------------------------------*/
 .postbody {
-	color: #333333;
+	color: #666666;
 }
 
 /* Content container styles
 ----------------------------------------*/
 .content {
-	color: #ccc;
+	color: #AAAAAA;
 }
 
 .content h2, .panel h2 {
@@ -461,8 +461,11 @@ dl.faq dt {
 
 /* Post signature */
 .signature {
-	border-top-color: #333333;
-	color: #ffffff;
+	border-top-style: inset;
+	border-top-color: #222222;
+	background: none repeat scroll 0% 0% rgb(44, 44, 44);
+	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.1);
+	color: #888888;
 	text-shadow: rgba(0,0,0,0.5) 0px -1px 0px;
 }
 
@@ -475,9 +478,18 @@ dl.faq dt {
 ----------------------------------------*/
 /* Quote block */
 blockquote {
-	background-color: #EBEADD;
+	background-color: #0e0e0e;
+	background-color: rgba(0, 0, 0, 0.37);
+	-webkit-transition: all 350ms ease-in-out;
+	-moz-transition: all 350ms ease-in-out;
+	-ms-transition: all 350ms ease-in-out;
+	-o-transition: all 350ms ease-in-out;
+	transition: all 350ms ease-in-out;	
 	background-image: url("{T_THEME_PATH}/images/quote.gif");
-	border-color:#DBDBCE;
+	border-color:#222222;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:10px;
 }
 
 .rtl blockquote {
@@ -486,26 +498,28 @@ blockquote {
 
 blockquote blockquote {
 	/* Nested quotes */
-	background-color:#EFEED9;
+	background-color: #0e0e0e;
+	background-color: rgba(0, 0, 0, 0.27);
 }
 
 blockquote blockquote blockquote {
 	/* Nested quotes */
-	background-color: #EBEADD;
+	background-color: #0e0e0e;
+	background-color: rgba(0, 0, 0, 0.17);
 }
 
 /* Code block */
 dl.codebox {
-	background-color: #FFFFFF;
-	border-color: #8e8e8e;
+	background-color: #000000;
+	border-color: #484848;
 }
 
 dl.codebox dt {
-	border-bottom-color:  #e7e7e7;
+	border-bottom-color:  #585858;
 }
 
 dl.codebox code {
-	color: #2E8B57;
+	color: #AE5700;
 }
 
 .syntaxbg		{ color: #FFFFFF; }
@@ -658,7 +672,7 @@ border-left-color: #333333;
 }
 
 .postprofile strong {
-	color: #000000;
+	color: #868686;
 }
 
 .online {
@@ -738,16 +752,17 @@ Colours and backgrounds for cp.css
 }
 
 #cp-main .panel li.row {
-	border-bottom-color: #838383;
-	border-top-color: #F9F9F9;
+	border-bottom-color: #000000;
+	border-top-color: #555555;
 }
 
 ul.cplist {
-	border-top-color: #838383;
+	border-top-color: #20202F;
 }
 
 #cp-main .panel li.header dd, #cp-main .panel li.header dt {
-	color: #000000;
+	color: #777777;
+	font-size: 1.4em;
 }
 
 #cp-main table.table1 thead th {
@@ -768,19 +783,19 @@ ul.cplist {
 
 #tabs a span {
 	background-image: url("{T_THEME_PATH}/images/bg_tabs2.gif");
-	color: #ffffff;
+	color: #888888;
 }
 
 #tabs a:hover span {
-	color: #222222;
+	color: #ffb14c;
 }
 
 #tabs .activetab a {
-	border-bottom-color: #f2f2f2;
+	border-bottom-color: #c5772b;
 }
 
 #tabs .activetab a span {
-	color: #ffffff;
+	color: #c5772b;
 }
 
 #tabs .activetab a:hover span {
@@ -806,7 +821,7 @@ ul.cplist {
 
 /* Link styles for the sub-section links */
 #navigation a {
-	color: #fff;
+	color: #666666;
 	background-color: #303030;
 	background-image: url("{T_THEME_PATH}/images/bg_menu.gif");
 }
@@ -819,17 +834,17 @@ ul.cplist {
 #navigation a:hover {
 	background-image: url("{T_THEME_PATH}/images/bg_menu_active.gif");	
 	background-color: #2b2b2b;
-	color: #f9f9f9;
+	color: #FFA64C;
 }
 
 #navigation #active-subsection a {
-	color: #fff;
+	color: #C5772B;
 	background-color: #2b2b2b;
 	background-image: url("{T_THEME_PATH}/images/bg_menu_active.gif");	
 }
 
 #navigation #active-subsection a:hover {
-	color: #f9f9f9;
+	color: #FFA64C;
 }
 
 /* Preferences pane layout
@@ -839,7 +854,7 @@ ul.cplist {
 }
 
 #cp-main .panel {
-	background-color: #F9F9F9;
+	background-color: rgba(14, 14, 14, 0.5);
 }
 
 #cp-main .pm {
@@ -847,19 +862,19 @@ ul.cplist {
 }
 
 #cp-main span.corners-top, #cp-menu span.corners-top {
-	background-image: url("{T_THEME_PATH}/images/corners_left2.png");
+	background-image: none;
 }
 
 #cp-main span.corners-top span, #cp-menu span.corners-top span {
-	background-image: url("{T_THEME_PATH}/images/corners_right2.png");
+	background-image: none;
 }
 
 #cp-main span.corners-bottom, #cp-menu span.corners-bottom {
-	background-image: url("{T_THEME_PATH}/images/corners_left2.png");
+	background-image: none;
 }
 
 #cp-main span.corners-bottom span, #cp-menu span.corners-bottom span {
-	background-image: url("{T_THEME_PATH}/images/corners_right2.png");
+	background-image: none;
 }
 
 /* Topicreview */
@@ -881,7 +896,7 @@ ul.cplist {
 
 /* Friends list */
 .cp-mini {
-	background-color: #f9f9f9;
+	background-color: rgba(14, 14, 14, 0.5);
 }
 
 dl.mini dt {
@@ -935,12 +950,13 @@ Colours and backgrounds for forms.css
 /* General form styles
 ----------------------------------------*/
 select {
-	background: #fafafa;
-	border: 1px solid #ccc;
+	background: #232323;
+	border: 1px solid #080808;
 	-webkit-border-radius:3px;
 	-moz-border-radius:3px;
 	border-radius:4px;
 	padding: 4px;
+	color: #666666
 }
 
 label {
@@ -954,12 +970,12 @@ option.disabled-option {
 /* Definition list layout for forms
 ---------------------------------------- */
 dd label {
-	color: #333;
+	color: #727272;
 }
 
 /* Hover effects */
 fieldset dl:hover dt label {
-	color: #000000;
+	color: #898989;
 }
 
 fieldset.fields2 dl:hover dt label {
@@ -981,38 +997,43 @@ fieldset.quick-login input.inputbox {
 ----------------------------------------*/
 
 #message-box textarea {
-	color: #333333;
+	color: #999999;
 }
 
 /* Input field styles
 ---------------------------------------- */
 .inputbox {
 	padding: 2px;
-	border: 1px solid rgb(212, 212, 212);
-	background: none repeat scroll 0% 0% rgb(252, 252, 252);
-	color: rgb(159, 159, 159);
-	text-shadow: 0px 1px 0px rgb(255, 255, 255);
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) inset;
+	border: 1px solid rgb(48, 48, 48);
+	background: none repeat scroll 0% 0% rgb(44, 44, 44);
+	background: none repeat scroll 0% 0% rgba(44, 44, 44, 0.5);
+	color: rgb(150, 150, 150);
+	text-shadow: 0px 1px 0px rgb(0, 0, 0);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 1) inset;
 	border-radius: 3px 3px 3px 3px;
 }
 
 .inputbox:hover {
-	border-color: #202020;
+	border-color: #D96C00;
 }
 
 .inputbox:focus {
-	border-color: #202020;
-	color: #333333;
+	border-color: #AE5700;
+	color: #999999;
+}
+
+*:focus {
+	outline: none;
 }
 
 /* Form button styles
 ---------------------------------------- */
 
 a.button1, input.button1, input.button3, a.button2, input.button2 {
-    background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) repeat-x scroll 0px -1px rgb(244, 244, 244);
-    border: 1px solid rgb(132, 132, 132);
-    color: rgb(65, 65, 65);
-    text-shadow: 0px 1px 0px rgb(255, 255, 255);
+    background: linear-gradient(to bottom, rgb(77, 76, 76) 0%, rgba(0, 0, 0, 0) 100%) repeat-x scroll 0px -1px rgb(54, 52, 52);
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(165, 165, 165);
+    text-shadow: 0px 1px 0px rgb(0, 0, 0);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
     border-radius: 3px 3px 3px 3px;
     display: inline-block;
@@ -1022,7 +1043,7 @@ a.button1, input.button1, input.button3, a.button2, input.button2 {
 }
 
 a.button1, input.button1 {
-	border-color: rgb(132, 132, 132);
+	border-color: rgb(0, 0, 0);
 }
 
 input.button3 {
@@ -1031,10 +1052,10 @@ input.button3 {
 
 /* Alternative button */
 a.button2, input.button2, input.button3 {
-    background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%) repeat-x scroll 0px -1px rgb(244, 244, 244);
-    border: 1px solid rgb(132, 132, 132);
-    color: rgb(65, 65, 65);
-    text-shadow: 0px 1px 0px rgb(255, 255, 255);
+    background: linear-gradient(to bottom, rgb(77, 76, 76) 0%, rgba(0, 0, 0, 0) 100%) repeat-x scroll 0px -1px rgb(54, 52, 52);
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(165, 165, 165);
+    text-shadow: 0px 1px 0px rgb(0, 0, 0);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
     border-radius: 3px 3px 3px 3px;
     display: inline-block;
@@ -1050,8 +1071,8 @@ a.button1, a.button1:link, a.button1:visited, a.button1:active, a.button2, a.but
 
 /* Hover states */
 a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover {
-	border-color: rgb(132, 132, 132);
-	color: #7a7a7a;
+	border-color: #c5772b;
+	color: #ffb14c;
 }
 
 input.search {

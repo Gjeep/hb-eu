@@ -167,3 +167,15 @@ ul.profile-icons li.edit-icon	{ margin: 0 0 0 3px; }
 ul.profile-icons li.quote-icon	{ margin: 0 0 0 0; }
 ul.profile-icons li.info-icon, ul.profile-icons li.report-icon, ul.profile-icons li.warn-icon	{ margin: 0 3px 0 0; }
 
+.buttonz {
+    width: 22px !important;
+    height: 22px !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    margin: 6px 0px !important;
+    border: 1px solid #20202F !important;
+}
+.buttonz:hover {
+    background-color: #000000 !important;
+    border: 1px solid #ffb14c !important;
+}

@@ -124,11 +124,9 @@
 	transition: all 350ms ease-in-out;	
 }
 
-.nav-bar a img{
-	display: none
-}
 
 .nav-bar a:hover {
+	color: #ffb14c;
 	background: rgba(0,0,0,0.27);
 	-webkit-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
 	-moz-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
@@ -261,8 +259,7 @@
 	text-align: left;
 	width: 400px;
 	display: inline-block;
-	padding-top: 80px;
-	padding-bottom: 110px;
+	padding: 90px 0px 120px 30px;
 }
 
 .topnav {
@@ -329,7 +326,7 @@
 
 .navlink a:hover {
 	color: #a2a2a2;
-	background: rgba(0,0,0,0.27);
+	background: rgba(0,0,0,0.5);
 	-webkit-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
 	-moz-box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
 	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
