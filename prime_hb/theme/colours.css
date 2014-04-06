@@ -90,6 +90,103 @@ hr.dashed {
 .primebg2	{ background-color: none; }
 .bg3	{ background-color: none; }
 
+
+/* -------------------------
+   calendar mod additions... 
+   ------------------------- */
+   
+/* uses border-top-color = .bg3 background-color
+ (the line between events in the month display) */
+hr.hrCal { 
+	border-top-color: none;
+}
+
+/* uses color from h1
+   (calendar header previous and next links) */
+.calH1 {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size:200%
+}
+
+/* The from and to times take up a lot of 
+  space in the calendar display.
+  Use this to shrink them */
+.smCalText{font-size:85%}
+
+/* bg4 is just slightly darker then bg3 
+  (used in calendar headers) */
+.bg4	{ background-color: none; }
+
+/* uses background-color of .bg3
+    (used to display the numbers and icons for 
+    each day in the month and week view displays ) */
+table tbody td.bg3_calMonH{ 
+	background-color: none;
+	font-size:85%
+}
+
+/* uses background-color of .bg4
+    (used to display the numbers and icons for 
+    each day in the month and week view displays ) */
+table tbody td.bg4_calMonH{ 
+	background-color: none;
+	font-size:85%
+}
+
+/* uses background-color of .bg1
+   (used to display days in calendar month/week view) */ 
+table.table1 tbody td.bg1_calMon {
+	background-color: none;
+	padding-top: 2px;
+	padding-bottom: 5px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+/* uses background-color of .bg2
+   (used to display days in calendar month/week view) */ 
+table.table1 tbody td.bg2_calMon {
+	background-color: none;
+	padding-top: 2px;
+	padding-bottom: 5px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+/* uses background-color of .bg3
+   (used to display days in calendar month/week view) */ 
+table.table1 tbody td.bg3_calMon {
+	background-color: none;
+	padding-top: 2px;
+	padding-bottom: 5px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+
+/* uses background-color of .bg1
+   uses border-top-color = .forumbg background-color
+   (used to display events in calendar day view) */ 
+table.table1 tbody td.bg1_calDay {
+	background-color: none;
+	border-top-color: #12A3EB;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+/* uses background-color of .bg3
+   uses border-top-color = .forumbg background-color
+   (used to display negative space in calendar day view) */ 
+table.table1 tbody td.bg3_calDay {
+	background-color: none;
+	border-top-color: #12A3EB;
+}
+
+/* -------------------------
+   calendar mod end
+   ------------------------- */
+
 .ucprowbg {
 	background-color: #989898;
 }
@@ -197,7 +294,44 @@ dl.details dd {
 
 /* Miscellaneous styles
 ---------------------------------------- */
+.xfire_online {
+  color: #62A7E3;
+  }
 
+.xfire_offline {
+  color:#898989;
+}
+
+.xfire_in_game {
+  color:#8BC53F;
+}
+
+.steam_online {
+  color: #62A7E3;
+  }
+
+.steam_offline {
+  color:#898989;
+}
+
+.steam_in-game {
+  color:#8BC53F;
+}
+
+.steam_online_border {
+  border: solid 2px #62A7E3;
+  color: #62A7E3;
+  }
+  
+.steam_offline_border {
+  border: solid 2px #62A7E3;
+  color: #898989;
+  }
+  
+.steam_in-game_border {
+  border: solid 2px #62A7E3;
+  color: #8BC53F;
+  }
 .copyright {
 	color: #555555;
 }
@@ -308,6 +442,15 @@ a.topictitle:active {
 	color: #2c2c2c;
 }
 
+
+.xfire a, .xfire a:visited, .xfire a:active, .xfire a:hover {
+	background-color: transparent;
+}
+
+
+.steam a, .steam a:visited, .steam a:active, .steam a:hover {
+	background-color: transparent;
+}
 .signature a, .signature a:visited, .signature a:hover, .signature a:active {
 	background-color: transparent;
 }
@@ -509,8 +652,24 @@ blockquote blockquote blockquote {
 }
 
 /* Code block */
+friendblock {
+	background-color: #0e0e0e;
+	background-color: rgba(0, 0, 0, 0.37);
+	-webkit-transition: all 350ms ease-in-out;
+	-moz-transition: all 350ms ease-in-out;
+	-ms-transition: all 350ms ease-in-out;
+	-o-transition: all 350ms ease-in-out;
+	transition: all 350ms ease-in-out;	
+	border-color:#222222;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:10px;
+}
+
+/* Code block */
 dl.codebox {
 	background-color: #000000;
+	background-color: rgba(0, 0, 0, 0.2);
 	border-color: #484848;
 }
 
@@ -693,6 +852,27 @@ Colours and backgrounds for buttons.css
 .newpm-icon span 	{ background-image: url("{IMG_BUTTON_PM_NEW_SRC}") ;}
 .forwardpm-icon span	{ background-image: url("{IMG_BUTTON_PM_FORWARD_SRC}") ;}
 
+/* The following are part of the calendar mod.
+   They follow the same format as the reply-icon, post-icon, locked-icon, pmreply-icon, newpm-icon, and forwardpm-icon.
+   If you are trying to implement a style other then prosilver, look at how your existing style defines
+   those icons, and do the same for the new calendar icons.
+*/
+.calendar-new-icon span 	{ background-image: url("{IMG_BUTTON_CALENDAR_NEW_SRC}") ;}
+.calendar-day-icon span     { background-image: url("{IMG_BUTTON_CALENDAR_DAY_SRC}") ;}
+.calendar-week-icon span    { background-image: url("{IMG_BUTTON_CALENDAR_WEEK_SRC}") ;}
+.calendar-month-icon span   { background-image: url("{IMG_BUTTON_CALENDAR_MONTH_SRC}") ;}
+a.facebook {
+	background-image: url("{T_THEME_PATH}/images/icon_facebook.png");
+}
+
+a.twitter {
+	background-image: url("{T_THEME_PATH}/images/icon_twitter.png");
+}
+
+a.delicious {
+	background-image: url("{T_THEME_PATH}/images/icon_delicious.png");
+}
+
 a.print {
 	background-image: url("{T_THEME_PATH}/images/icon_print.gif");
 }
@@ -726,6 +906,7 @@ a.fontsize {
 .aim-icon, .aim-icon a			{ background-image: url("{IMG_ICON_CONTACT_AIM_SRC}"); }
 .yahoo-icon, .yahoo-icon a		{ background-image: url("{IMG_ICON_CONTACT_YAHOO_SRC}"); }
 .web-icon, .web-icon a			{ background-image: url("{IMG_ICON_CONTACT_WWW_SRC}"); }
+.steam_profile-icon, .steam_profile-icon a			{ background-image: url("{T_IMAGESET_PATH}/icon_contact_steam_profile.gif"); }
 .msnm-icon, .msnm-icon a			{ background-image: url("{IMG_ICON_CONTACT_MSNM_SRC}"); }
 .icq-icon, .icq-icon a			{ background-image: url("{IMG_ICON_CONTACT_ICQ_SRC}"); }
 .jabber-icon, .jabber-icon a		{ background-image: url("{IMG_ICON_CONTACT_JABBER_SRC}"); }
@@ -735,6 +916,8 @@ a.fontsize {
 /* Moderator icons */
 .report-icon, .report-icon a		{ background-image: url("{IMG_ICON_POST_REPORT_SRC}"); }
 .edit-icon, .edit-icon a			{ background-image: url("{IMG_ICON_POST_EDIT_SRC}"); }
+.edit-all-icon, .edit-all-icon a			{ background-image: url("{IMG_ICON_CALENDAR_EDIT_ALL_SRC}"); }
+.delete-all-icon, .delete-all-icon a			{ background-image: url("{IMG_ICON_CALENDAR_DELETE_ALL_SRC}"); }
 .delete-icon, .delete-icon a		{ background-image: url("{IMG_ICON_POST_DELETE_SRC}"); }
 .info-icon, .info-icon a			{ background-image: url("{IMG_ICON_POST_INFO_SRC}"); }
 .warn-icon, .warn-icon a			{ background-image: url("{IMG_ICON_USER_WARN_SRC}"); } /* Need updated warn icon */
@@ -1079,6 +1262,17 @@ input.search {
 	background-image: url("{T_THEME_PATH}/images/icon_textbox_search.gif");
 }
 
+.timecount{
+	color:#c21017;
+	font-size:18px;
+	text-align:center;
+	margin-top:4px;
+}
+
+span.cd-time{
+	color:#222222;
+}
+
 input.disabled {
 	color: #666666;
 }
@@ -1103,4 +1297,29 @@ a.qlbutton, input.qlbutton {
 
 a.qlbutton, input.qlbutton {
 	border-color: #000;
+}
+
+.labelfield{ /*CSS for label field in general*/
+color: #CCCCCC;
+font-size: 90%;
+}
+
+
+.datefield{ /*CSS for date field in general*/
+color: #888888;
+font-size: 90%;
+}
+
+#example1 a{ /*CSS specific to demo 3*/
+text-decoration: underline;
+color: #985C21;
+font-weight: bold;
+}
+
+#example1 p{ /*CSS specific to demo 3*/
+margin-bottom: 2px;
+}
+
+code{ /*CSS for insructions*/
+color: red;
 }

@@ -40,7 +40,15 @@
 .pmreply-icon span	{ background: none 0 0 no-repeat; }
 .newpm-icon span 	{ background: none 0 0 no-repeat; }
 .forwardpm-icon span 	{ background: none 0 0 no-repeat; }
-
+/* The following are part of the calendar mod.
+   They follow the same format as the reply-icon, post-icon, locked-icon, pmreply-icon, newpm-icon, and forwardpm-icon.
+   If you are trying to implement a style other then prosilver, look at how your existing style defines
+   those icons, and do the same for the new calendar icons.
+*/
+.calendar-new-icon span    { background: transparent none 0 0 no-repeat; }
+.calendar-day-icon span    { background: transparent none 0 0 no-repeat; }
+.calendar-week-icon span   { background: transparent none 0 0 no-repeat; }
+.calendar-month-icon span  { background: transparent none 0 0 no-repeat; }
 /* Set big button dimensions */
 .buttons div.reply-icon		{ width: {IMG_BUTTON_TOPIC_REPLY_WIDTH}px; height: {IMG_BUTTON_TOPIC_REPLY_HEIGHT}px; }
 .buttons div.post-icon		{ width: {IMG_BUTTON_TOPIC_NEW_WIDTH}px; height: {IMG_BUTTON_TOPIC_NEW_HEIGHT}px; }
@@ -48,7 +56,18 @@
 .buttons div.pmreply-icon	{ width: {IMG_BUTTON_PM_REPLY_WIDTH}px; height: {IMG_BUTTON_PM_REPLY_HEIGHT}px; }
 .buttons div.newpm-icon		{ width: {IMG_BUTTON_PM_NEW_WIDTH}px; height: {IMG_BUTTON_PM_NEW_HEIGHT}px; }
 .buttons div.forwardpm-icon	{ width: {IMG_BUTTON_PM_FORWARD_WIDTH}px; height: {IMG_BUTTON_PM_FORWARD_HEIGHT}px; }
-
+/* The following are part of the calendar mod.
+   They follow the same format as the reply-icon, post-icon, locked-icon, pmreply-icon, newpm-icon, and forwardpm-icon.
+   If you are trying to implement a style other then prosilver, look at how your existing style defines
+   those icons, and do the same for the new calendar icons.
+   
+   Note the "text-align: left" was added because there were a few instances where the icons were cut in half... 
+   adding the text align property helps reserve enough space to fully display the icon.
+*/
+.buttons div.calendar-new-icon	{ width: {IMG_BUTTON_CALENDAR_NEW_WIDTH}px; height: {IMG_BUTTON_CALENDAR_NEW_HEIGHT}px; text-align: left; }
+.buttons div.calendar-day-icon	{ width: {IMG_BUTTON_CALENDAR_DAY_WIDTH}px; height: {IMG_BUTTON_CALENDAR_DAY_HEIGHT}px; text-align: left; }
+.buttons div.calendar-week-icon	{ width: {IMG_BUTTON_CALENDAR_WEEK_WIDTH}px; height: {IMG_BUTTON_CALENDAR_WEEK_HEIGHT}px; text-align: left; }
+.buttons div.calendar-month-icon	{ width: {IMG_BUTTON_CALENDAR_MONTH_WIDTH}px; height: {IMG_BUTTON_CALENDAR_MONTH_HEIGHT}px; text-align: left; }
 /* Sub-header (navigation bar)
 --------------------------------------------- */
 a.print, a.sendemail, a.fontsize {
@@ -59,7 +78,29 @@ a.print, a.sendemail, a.fontsize {
 	text-align: left;
 	background-repeat: no-repeat;
 }
+a.facebook, a.twitter, a.delicious {
+	display: block;
+	overflow: hidden;
+	height: 26px;
+	text-indent: -5000px;
+	text-align: left;
+	background-repeat: no-repeat;
+}
 
+a.facebook {
+	background-image: none;
+	width: 22px;
+}
+
+a.twitter {
+	background-image: none;
+	width: 22px;
+}
+
+a.delicious {
+	background-image: none;
+	width: 22px;
+}
 a.print {
 	background-image: none;
 	width: 22px;
@@ -133,7 +174,9 @@ ul.profile-icons li a:hover { background: none; }
 .aim-icon, .aim-icon a			{ background: none top left no-repeat; }
 .yahoo-icon, .yahoo-icon a		{ background: none top left no-repeat; }
 .web-icon, .web-icon a			{ background: none top left no-repeat; }
+.steam_profile-icon, .steam_profile-icon a		{ background: none top left no-repeat; }
 .msnm-icon, .msnm-icon a			{ background: none top left no-repeat; }
+.xfire-icon, .xfire-icon a			{ background: none top left no-repeat; }
 .icq-icon, .icq-icon a			{ background: none top left no-repeat; }
 .jabber-icon, .jabber-icon a		{ background: none top left no-repeat; }
 .pm-icon, .pm-icon a				{ background: none top left no-repeat; }
@@ -147,17 +190,20 @@ ul.profile-icons li a:hover { background: none; }
 .info-icon, .info-icon a			{ background: none top left no-repeat; }
 
 /* Set profile icon dimensions */
-ul.profile-icons li.email-icon		{ width: {IMG_ICON_CONTACT_EMAIL_WIDTH}px; height: {IMG_ICON_CONTACT_EMAIL_HEIGHT}px; }
+ul.profile-icons li.email-icon	{ width: {IMG_ICON_CONTACT_EMAIL_WIDTH}px; height: {IMG_ICON_CONTACT_EMAIL_HEIGHT}px; }
 ul.profile-icons li.aim-icon	{ width: {IMG_ICON_CONTACT_AIM_WIDTH}px; height: {IMG_ICON_CONTACT_AIM_HEIGHT}px; }
 ul.profile-icons li.yahoo-icon	{ width: {IMG_ICON_CONTACT_YAHOO_WIDTH}px; height: {IMG_ICON_CONTACT_YAHOO_HEIGHT}px; }
 ul.profile-icons li.web-icon	{ width: {IMG_ICON_CONTACT_WWW_WIDTH}px; height: {IMG_ICON_CONTACT_WWW_HEIGHT}px; }
-ul.profile-icons li.msnm-icon	{ width: {IMG_ICON_CONTACT_MSNM_WIDTH}px; height: {IMG_ICON_CONTACT_MSNM_HEIGHT}px; }
+ul.profile-icons li.steam_profile-icon	{ width: 20px; height: 20px; }
+ul.profile-icons li.msnm-icon		{ width: {IMG_ICON_CONTACT_MSNM_WIDTH}px; height: {IMG_ICON_CONTACT_MSNM_HEIGHT}px; }
 ul.profile-icons li.icq-icon	{ width: {IMG_ICON_CONTACT_ICQ_WIDTH}px; height: {IMG_ICON_CONTACT_ICQ_HEIGHT}px; }
 ul.profile-icons li.jabber-icon	{ width: {IMG_ICON_CONTACT_JABBER_WIDTH}px; height: {IMG_ICON_CONTACT_JABBER_HEIGHT}px; }
 ul.profile-icons li.pm-icon		{ width: {IMG_ICON_CONTACT_PM_WIDTH}px; height: {IMG_ICON_CONTACT_PM_HEIGHT}px; }
 ul.profile-icons li.quote-icon	{ width: {IMG_ICON_POST_QUOTE_WIDTH}px; height: {IMG_ICON_POST_QUOTE_HEIGHT}px; }
 ul.profile-icons li.report-icon	{ width: {IMG_ICON_POST_REPORT_WIDTH}px; height: {IMG_ICON_POST_REPORT_HEIGHT}px; }
 ul.profile-icons li.edit-icon	{ width: {IMG_ICON_POST_EDIT_WIDTH}px; height: {IMG_ICON_POST_EDIT_HEIGHT}px; }
+ul.profile-icons li.edit-all-icon	{ width: {IMG_ICON_CALENDAR_EDIT_ALL_WIDTH}px; height: {IMG_ICON_CALENDAR_EDIT_ALL_HEIGHT}px; }
+ul.profile-icons li.delete-all-icon	{ width: {IMG_ICON_CALENDAR_DELETE_ALL_WIDTH}px; height: {IMG_ICON_CALENDAR_DELETE_ALL_HEIGHT}px; }
 ul.profile-icons li.delete-icon	{ width: {IMG_ICON_POST_DELETE_WIDTH}px; height: {IMG_ICON_POST_DELETE_HEIGHT}px; }
 ul.profile-icons li.info-icon	{ width: {IMG_ICON_POST_INFO_WIDTH}px; height: {IMG_ICON_POST_INFO_HEIGHT}px; }
 ul.profile-icons li.warn-icon	{ width: {IMG_ICON_USER_WARN_WIDTH}px; height: {IMG_ICON_USER_WARN_HEIGHT}px; }

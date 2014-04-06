@@ -1,0 +1,45 @@
+	<div class="maintitle">
+			<ul class="topiclist">
+				<li class="header">
+					<dl class="icon">
+						<dt><a href="{U_CALENDAR}">{L_CALENDAR}</a></dt>
+					</dl>
+				</li>
+			</ul>
+	</div>
+	<!-- IF SCRIPT_NAME eq 'index' --><div class="trigger active"></div><!-- ENDIF -->
+		<div class="collapsethis">
+
+  <table class="table1" cellspacing="1" cellpadding="0">
+    <tr>
+      <td style="width: 14%; height: 24px; text-align: center" class="bg4">{SUN}</td>
+      <td style="width: 14%; height: 24px; text-align: center" class="bg4">{MON}</td>
+      <td style="width: 14%; height: 24px; text-align: center" class="bg4">{TUE}</td>
+      <td style="width: 14%; height: 24px; text-align: center" class="bg4">{WED}</td>
+      <td style="width: 14%; height: 24px; text-align: center" class="bg4">{THU}</td>
+      <td style="width: 14%; height: 24px; text-align: center" class="bg4">{FRI}</td>
+      <td style="width: 14%; height: 24px; text-align: center" class="bg4">{SAT}</td>
+    </tr>
+    <!-- BEGIN calendar_days -->
+    <!-- IF calendar_days.START_WEEK --><tr style="height: 100px"><!-- ENDIF -->
+      <!-- IF calendar_days.DUMMY_DAY --><td  valign="top" class="bg3_calMon">&nbsp;</td><!-- ELSE --><td valign="top" class="<!-- IF calendar_days.DAY_CLASS eq 'highlight' -->bg2_calMon<!-- ELSE -->bg1_calMon<!-- ENDIF -->"><table style="width: 100%" cellpadding="0" cellspacing="0" border="0">
+          <tr><td class="<!-- IF calendar_days.HEADER_CLASS eq 'highlight' -->bg4_calMonH<!-- ELSE -->bg3_calMonH<!-- ENDIF -->"><!-- IF calendar_days.ADD_LINK --><a href="{calendar_days.ADD_LINK}">{calendar_days.NUMBER}</a><!-- ELSE -->{calendar_days.NUMBER}<!-- ENDIF --><br />
+          </td></tr></table><br />
+
+ 			<!-- BEGIN events -->
+          		<a href="{calendar_days.events.EVENT_URL}" title="<!-- IF calendar_days.events.ETYPE_DISPLAY_NAME -->{calendar_days.events.ETYPE_DISPLAY_NAME}<!-- ENDIF -->">
+          			<!-- IF calendar_days.events.COLOR --><span style="color:#{calendar_days.events.COLOR}"><!-- ENDIF -->
+          			<!-- IF calendar_days.events.DISPLAY_BOLD --><strong><!-- ENDIF -->
+          			<!-- IF calendar_days.events.IMAGE --><img align="center" src="{calendar_days.events.IMAGE}" alt="{calendar_days.events.ETYPE_DISPLAY_NAME}" /></br><!-- ENDIF -->
+          			<!-- IF calendar_days.events.ETYPE_DISPLAY_NAME -->{calendar_days.events.ETYPE_DISPLAY_NAME}: <!-- ENDIF -->
+          			<!-- IF calendar_days.events.DISPLAY_BOLD --></strong><!-- ENDIF -->
+          			<!-- IF calendar_days.events.COLOR --></span><!-- ENDIF -->
+          		</a>
+          	<!-- END events -->
+      </td>
+      <!-- ENDIF -->
+    <!-- IF calendar_days.END_WEEK --></tr><!-- ENDIF -->
+
+    <!-- END calendar_days -->
+  </table>
+  </div>

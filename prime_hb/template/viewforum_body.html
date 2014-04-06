@@ -112,7 +112,7 @@
 	<!-- ENDIF -->
 
 <!-- ENDIF -->
-
+<!-- IF CBB_QUICK_MOD and .topicrow --><!-- INCLUDE quickmod_body.html --><!-- ENDIF -->
 <!-- BEGIN topicrow -->
 
 	<!-- IF not topicrow.S_TOPIC_TYPE_SWITCH and not topicrow.S_FIRST_ROW -->
@@ -139,7 +139,7 @@
 		<li class="row<!-- IF topicrow.S_ROW_COUNT is even --> primebg1<!-- ELSE --> primebg2<!-- ENDIF --><!-- IF topicrow.S_POST_GLOBAL --> global-announce<!-- ENDIF --><!-- IF topicrow.S_POST_ANNOUNCE --> announce<!-- ENDIF --><!-- IF topicrow.S_POST_STICKY --> sticky<!-- ENDIF --><!-- IF topicrow.S_TOPIC_REPORTED --> reported<!-- ENDIF -->">
 			<dl class="icon" style="background-image: url({topicrow.TOPIC_FOLDER_IMG_SRC}); background-repeat: no-repeat;">
 
-				<dt<!-- IF topicrow.TOPIC_ICON_IMG and S_TOPIC_ICONS --> style="background-image: url({T_ICONS_PATH}{topicrow.TOPIC_ICON_IMG}); background-repeat: no-repeat;"<!-- ENDIF --> title="{topicrow.TOPIC_FOLDER_IMG_ALT}"><!-- IF topicrow.S_TOPIC_ATTR -->{topicrow.TOPIC_ATTRIBUTE} <!-- ENDIF --><!-- IF topicrow.S_UNREAD_TOPIC --><a href="{topicrow.U_NEWEST_POST}">{NEWEST_POST_IMG}</a> <!-- ENDIF -->
+				<dt<!-- IF topicrow.TOPIC_ICON_IMG and S_TOPIC_ICONS --> style="background-image: url({T_ICONS_PATH}{topicrow.TOPIC_ICON_IMG}); background-repeat: no-repeat;"<!-- ENDIF --> title="{topicrow.TOPIC_FOLDER_IMG_ALT}"><!-- IF topicrow.S_TOPIC_ATTR -->{topicrow.TOPIC_ATTRIBUTE} <!-- ENDIF --><div class="topic_content">{topicrow.QM_ACTIONS}<!-- IF topicrow.S_UNREAD_TOPIC --><a href="{topicrow.U_NEWEST_POST}">{NEWEST_POST_IMG}</a> <!-- ENDIF -->
 
 			<!-- IF topicrow.PRE_IMG or topicrow.PRE_ATTACH -->
 			<span style="padding:1px;float:left;width:{topicrow.CONVERT_SIZE}px;text-align:center;<!-- IF (topicrow.PRE_IMG or topicrow.PRE_ATTACH) and BORDER_COLOR --> background-color:{BORDER_COLOR};<!-- ENDIF -->">
@@ -176,7 +176,7 @@
 
 			<a href="{topicrow.U_VIEW_TOPIC}" class="topictitle"<!-- IF topicrow.S_UNREAD_TOPIC --> style="color:#b22222;"<!-- ENDIF -->>{topicrow.TOPIC_TITLE}</a>
 					<!-- IF topicrow.S_TOPIC_UNAPPROVED or topicrow.S_POSTS_UNAPPROVED --><a href="{topicrow.U_MCP_QUEUE}">{topicrow.UNAPPROVED_IMG}</a> <!-- ENDIF -->
-					<!-- IF topicrow.S_TOPIC_REPORTED --><a href="{topicrow.U_MCP_REPORT}">{REPORTED_IMG}</a><!-- ENDIF --><br />
+					<!-- IF topicrow.S_TOPIC_REPORTED --><a href="{topicrow.U_MCP_REPORT}">{REPORTED_IMG}</a><!-- ENDIF --></div>
 					<!-- IF topicrow.PAGINATION --><strong class="pagination"><span>{topicrow.PAGINATION}</span></strong><!-- ENDIF -->
 					<!-- IF topicrow.ATTACH_ICON_IMG -->{topicrow.ATTACH_ICON_IMG} <!-- ENDIF -->{L_POST_BY_AUTHOR} {topicrow.TOPIC_AUTHOR_FULL} &raquo; {topicrow.FIRST_POST_TIME}
 			<!-- IF (topicrow.PRE_IMG or topicrow.PRE_ATTACH) or(EMPTY_IMG)  or ((not EMPTY_IMG)  and (PLACEHOLDER)) -->			
@@ -188,7 +188,9 @@
 				<dd class="lastpost"><span><dfn>{L_LAST_POST} </dfn>{L_POST_BY_AUTHOR} {topicrow.LAST_POST_AUTHOR_FULL}
 					<!-- IF not S_IS_BOT --><a href="{topicrow.U_LAST_POST}">{LAST_POST_IMG}</a> <!-- ENDIF --><br />{topicrow.LAST_POST_TIME}</span>
 				</dd>
+	<!-- IF CBB_QUICK_MOD --><dd class="row_mark"><input type="checkbox" class="topic_id_list" name="topic_id_list[]" value="{topicrow.QM_TOPIC_ID}" /></dd><!-- ENDIF -->
 			</dl>
+			{topicrow.QM_FIELDS}
 		</li>
 
 	<!-- IF topicrow.S_LAST_ROW -->
@@ -205,7 +207,10 @@
 	</div>
 	<!-- ENDIF -->
 <!-- END topicrow -->
-
+<!-- IF CBB_QUICK_MOD and .topicrow -->
+	<!-- DEFINE $QM_CONTENT = 1 -->
+	<!-- INCLUDE quickmod_body.html -->
+<!-- ENDIF -->
 <!-- IF S_SELECT_SORT_DAYS and not S_DISPLAY_ACTIVE -->
 	<form method="post" action="{S_FORUM_ACTION}">
 		<fieldset class="display-options">

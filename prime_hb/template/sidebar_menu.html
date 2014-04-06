@@ -11,10 +11,11 @@
 	<!-- IF SCRIPT_NAME eq 'index' --><div class="trigger active"></div><!-- ENDIF -->
 		<div class="collapsethis">
 			<ul class="topiclist forums" style="padding: 0.05cm">
+				<div style="text-align: center;">
 				<!-- IF S_DISPLAY_SEARCH -->
-					<a href="{U_NEW_POSTS}"><abbr title="{L_NEW_POSTS}"><img src="{T_THEME_PATH}/images/dLightbulb.png" alt="{L_NEW_POSTS}" /></abbr></a>
-					<a href="{U_UNREAD_POSTS}"><abbr title="{L_UNREAD_POSTS}"><img src="{T_THEME_PATH}/images/dLightning.png" alt="{L_UNREAD_POSTS}" /></abbr></a>
-					<a href=""><abbr title="Media page"><img src="{T_THEME_PATH}/images/dMedia-Player.png" alt="Media page" /></abbr></a>
+					<!-- IF S_USER_LOGGED_IN --><a href="{U_SEARCH_NEW}"><abbr title="{L_SEARCH_NEW}"><img src="{T_THEME_PATH}/images/dLightbulb.png" alt="{L_NEW_POSTS}" /></abbr></a><!-- ELSE --><a href="{U_SEARCH_NEW}"><abbr title="{L_SEARCH_NEW}"><img src="{T_THEME_PATH}/images/dLightbulb.png" alt="{L_NEW_POSTS}" /></abbr></a><!-- ENDIF -->
+					<!-- IF S_LOAD_UNREADS --><a href="{U_SEARCH_UNREAD}"><abbr title="{L_SEARCH_UNREAD}"><img src="{T_THEME_PATH}/images/dLightning.png" alt="{L_SEARCH_UNREAD}" /></abbr></a><!-- ELSE --><a href="{U_SEARCH_UNREAD}"><abbr title="{L_SEARCH_UNREAD}"><img src="{T_THEME_PATH}/images/dLightning.png" alt="{L_SEARCH_UNREAD}" /></abbr></a><!-- ENDIF -->
+					<a href="{ROOT_PATH}media.php"><abbr title="Media page"><img src="{T_THEME_PATH}/images/dMedia-Player.png" alt="Media page" /></abbr></a>
 					<a href="{U_SEARCH}"><abbr title="Advanced Search"><img src="{T_THEME_PATH}/images/dSearch.png" alt="Advanced Search" /></abbr></a>
 				<!-- ENDIF -->
 				<!-- IF U_UM_BOOKMARKS -->
@@ -25,7 +26,7 @@
 				<!-- ENDIF -->
 				<!-- IF U_MCP -->
 					<a href="{U_MCP}"><abbr title="{L_MCP}"><img src="{T_THEME_PATH}/images/dLock.png" alt="{L_MCP}" /></abbr></a>
-				<!-- ENDIF -->
+				<!-- ENDIF --></div>
 			</ul>
 		</div>
 
