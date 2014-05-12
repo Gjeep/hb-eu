@@ -1,19 +1,17 @@
 <div id="page-sidebar">
 <!-- IF S_USER_LOGGED_IN and not S_IS_BOT -->
-<!-- INCLUDE sidebar_menu.html -->
-</br>
-<!-- INCLUDE sidebar_calendar_week.html -->
-</br>
-<!-- INCLUDE mchat_body.html -->
-</br>
 <!-- INCLUDE sidebar_games.html -->
-</br>
+<br />
+<!-- INCLUDE mchat_body.html -->
+<br />
+<!-- IF RECENT_TOPICS_DISPLAY --><!-- INCLUDE recent_topics_body.html --><!-- ENDIF -->
+<br />
 <!-- INCLUDE sidebar_rss.html -->
 <!-- ELSE -->
-<!-- INCLUDE sidebar_calendar_week.html -->
-</br>
+<!-- IF RECENT_TOPICS_DISPLAY --><!-- INCLUDE recent_topics_body.html --><!-- ENDIF -->
+<br />
 <!-- INCLUDE sidebar_youtube.html -->
-</br>
+<br />
 <!-- INCLUDE sidebar_rss.html -->
 <!-- ENDIF -->
 </div>
