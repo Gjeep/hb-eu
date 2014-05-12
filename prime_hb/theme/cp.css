@@ -294,7 +294,7 @@ ul.cplist {
 }
 
 #cp-main .pm {
-	background-color: #FFFFFF;
+	background-color: none;
 }
 
 #cp-main span.corners-top, #cp-menu span.corners-top {

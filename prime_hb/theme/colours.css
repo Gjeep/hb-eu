@@ -652,21 +652,6 @@ blockquote blockquote blockquote {
 }
 
 /* Code block */
-friendblock {
-	background-color: #0e0e0e;
-	background-color: rgba(0, 0, 0, 0.37);
-	-webkit-transition: all 350ms ease-in-out;
-	-moz-transition: all 350ms ease-in-out;
-	-ms-transition: all 350ms ease-in-out;
-	-o-transition: all 350ms ease-in-out;
-	transition: all 350ms ease-in-out;	
-	border-color:#222222;
-	-webkit-border-radius:3px;
-	-moz-border-radius:3px;
-	border-radius:10px;
-}
-
-/* Code block */
 dl.codebox {
 	background-color: #000000;
 	background-color: rgba(0, 0, 0, 0.2);
@@ -1041,7 +1026,7 @@ ul.cplist {
 }
 
 #cp-main .pm {
-	background-color: #FFFFFF;
+	background-color: none;
 }
 
 #cp-main span.corners-top, #cp-menu span.corners-top {

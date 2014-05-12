@@ -1,0 +1,38 @@
+
+/*  cBB Quick Mod StyleSheet
+    --------------------------------------------------------------
+	Style:	proSilver	
+	Copyright (c) 2013 CaniDev ( http://www.canidev.com )
+    --------------------------------------------------------------
+*/
+
+.quick_mod_buttons {
+	right: 4px;
+	background-color: none;
+}
+
+ul.topiclist dd.row_mark {
+	display: none;
+}
+
+ul.topiclist dd.row_mark, .qm_loading {
+	width: 25px !important;
+}
+
+ul.topiclist dd.row_mark, #quick_ok {
+	position: absolute;
+	right: 0;
+} 
+
+ul.topiclist dd.row_mark, #qm_dialog {
+	text-align: center;
+}
+
+.qm-dialog {
+	background: #0076b1 url('images/bg_list.gif') 0 -1px repeat-x;
+	border-color: #000000;
+}
+
+.qm-dialog-header {
+	color: #FFFFFF;
+}

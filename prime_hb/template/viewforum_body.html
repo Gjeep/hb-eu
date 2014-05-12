@@ -144,44 +144,43 @@
 			<!-- IF topicrow.PRE_IMG or topicrow.PRE_ATTACH -->
 			<span style="padding:1px;float:left;width:{topicrow.CONVERT_SIZE}px;text-align:center;<!-- IF (topicrow.PRE_IMG or topicrow.PRE_ATTACH) and BORDER_COLOR --> background-color:{BORDER_COLOR};<!-- ENDIF -->">
 			<!-- IF topicrow.PRE_IMG -->
-			<a href="{topicrow.ORIG_LINK}"><img style="padding-top:2px;" src="{topicrow.PRE_IMG}" alt="" /></a>	
+			<a href="{topicrow.ORIG_LINK}"><img style="padding-top:2px;" src="{topicrow.PRE_IMG}" alt="" /></a>
 			<!-- ELSEIF topicrow.PRE_ATTACH -->
 			<a href="{topicrow.ORIG_ATTACH_LINK}"><img style="padding-top:2px;" src="{topicrow.PRE_ATTACH}" alt="" /></a>
-			<!-- ENDIF -->					
+			<!-- ENDIF -->
 			</span>
 			<span style="position:absolute; left:{topicrow.CONVERT_DIV_SIZE}px;">
-			<!-- ELSEIF EMPTY_IMG -->	
+			<!-- ELSEIF EMPTY_IMG -->
 			<span style="padding:1px;float:left;width:{CONVERT_SIZE}px;text-align:center;<!-- IF EMPTY_IMG and BORDER_COLOR --> background-color:{BORDER_COLOR};<!-- ENDIF -->">
 			<img style="padding-top:2px;" src="{EMPTY_IMG}" alt="" />
 			</span>
 			<span style="position:absolute; left:{CONVERT_DIV_SIZE}px;">
-			<!-- ELSEIF (not EMPTY_IMG)  and (PLACEHOLDER) -->
+			<!-- ELSEIF (not EMPTY_IMG) and (PLACEHOLDER) -->
 			<span style="padding:1px;float:left;width:{CONVERT_SIZE}px;text-align:center;">
 			</span>
 			<span style="position:absolute; left:{CONVERT_DIV_SIZE}px;">
 			<!-- ENDIF -->
-
-			<!-- IF topicrow.TUBE_IMG_1 -->	
+			<!-- IF (topicrow.PRE_IMG or topicrow.PRE_ATTACH) or(EMPTY_IMG)  or ((not EMPTY_IMG)  and (PLACEHOLDER)) -->
+				</span>
+			<!-- ENDIF -->
+			<!-- IF topicrow.TUBE_IMG_1 -->
 			<span style="padding:1px;margin-right:5px;float:left;width:{T_THUMB_WIDTH}px;text-align:center; background-color:{BORDER_COLOR};">
 			<!-- IF S_YOUTUBE_HOVER --><span style="javascript:void(0);width:480px;height:360px;" onmouseover="Tip('&lt;img src=http://i2.ytimg.com/vi/{topicrow.TUBE_IMG_1}/hqdefault.jpg width=480 height=360 /&gt;', WIDTH, 480, PADDING, 4, BGCOLOR, '#DFE9F3', BORDERCOLOR, '#027AB7', OFFSETX, 100, OFFSETY, -100)" onmouseout="UnTip()"><a href="{topicrow.TUBE_LNK_1}"><!-- ENDIF --><img style="margin-top:1px;" src="http://i2.ytimg.com/vi/{topicrow.TUBE_IMG_1}/default.jpg" width="{Y_THUMB_WIDTH}" height="{Y_THUMB_HEIGHT}" alt="" /><!-- IF S_YOUTUBE_HOVER --></a></span><!-- ENDIF -->
 			</span>
 			<!-- ENDIF -->
 			
-			<!-- IF topicrow.TUBE_IMG_2 -->	
+			<!-- IF topicrow.TUBE_IMG_2 -->
 			<span style="padding:1px;margin-right:5px;float:left;width:{T_THUMB_WIDTH}px;text-align:center; background-color:{BORDER_COLOR};">
 			<!-- IF S_YOUTUBE_HOVER --><span style="javascript:void(0);width:480px;height:360px;" onmouseover="Tip('&lt;img src=http://i2.ytimg.com/vi/{topicrow.TUBE_IMG_2}/hqdefault.jpg width=480 height=360 /&gt;', WIDTH, 480, PADDING, 4, BGCOLOR, '#DFE9F3', BORDERCOLOR, '#027AB7', OFFSETX, 100, OFFSETY, -100)" onmouseout="UnTip()"><a href="{topicrow.TUBE_LNK_2}"><!-- ENDIF --><img style="margin-top:1px;"  src="http://i2.ytimg.com/vi/{topicrow.TUBE_IMG_2}/default.jpg" width="{Y_THUMB_WIDTH}" height="{Y_THUMB_HEIGHT}" alt="" /><!-- IF S_YOUTUBE_HOVER --></a></span><!-- ENDIF -->
 			</span>
 			<!-- ENDIF -->
 			
-
-			<a href="{topicrow.U_VIEW_TOPIC}" class="topictitle"<!-- IF topicrow.S_UNREAD_TOPIC --> style="color:#b22222;"<!-- ENDIF -->>{topicrow.TOPIC_TITLE}</a>
+			<a href="{topicrow.U_VIEW_TOPIC}" class="topictitle"<!-- IF topicrow.S_UNREAD_TOPIC --> style="color:#ffb14c;"<!-- ENDIF -->>{topicrow.TOPIC_TITLE}</a>
 					<!-- IF topicrow.S_TOPIC_UNAPPROVED or topicrow.S_POSTS_UNAPPROVED --><a href="{topicrow.U_MCP_QUEUE}">{topicrow.UNAPPROVED_IMG}</a> <!-- ENDIF -->
 					<!-- IF topicrow.S_TOPIC_REPORTED --><a href="{topicrow.U_MCP_REPORT}">{REPORTED_IMG}</a><!-- ENDIF --></div>
 					<!-- IF topicrow.PAGINATION --><strong class="pagination"><span>{topicrow.PAGINATION}</span></strong><!-- ENDIF -->
 					<!-- IF topicrow.ATTACH_ICON_IMG -->{topicrow.ATTACH_ICON_IMG} <!-- ENDIF -->{L_POST_BY_AUTHOR} {topicrow.TOPIC_AUTHOR_FULL} &raquo; {topicrow.FIRST_POST_TIME}
-			<!-- IF (topicrow.PRE_IMG or topicrow.PRE_ATTACH) or(EMPTY_IMG)  or ((not EMPTY_IMG)  and (PLACEHOLDER)) -->			
-				</span>
-			<!-- ENDIF -->
+
 				</dt>
 				<dd class="posts">{topicrow.REPLIES} <dfn>{L_REPLIES}</dfn></dd>
 				<dd class="views">{topicrow.VIEWS} <dfn>{L_VIEWS}</dfn></dd>
